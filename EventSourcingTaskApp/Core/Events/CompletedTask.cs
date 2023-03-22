@@ -1,4 +1,5 @@
-﻿namespace EventSourcingTaskApp.Core.Events
+﻿// ReSharper disable UnusedAutoPropertyAccessor.Global
+namespace EventSourcingTaskApp.Core.Events
 {
     using System;
 

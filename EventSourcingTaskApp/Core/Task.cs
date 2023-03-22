@@ -2,6 +2,7 @@
 using EventSourcingTaskApp.Core.Events;
 using EventSourcingTaskApp.Core.Exceptions;
 using EventSourcingTaskApp.Core.Framework;
+// ReSharper disable UnusedAutoPropertyAccessor.Global
 
 namespace EventSourcingTaskApp.Core;
 
@@ -104,6 +105,7 @@ public class Task : Aggregate
         Section = @event.Section;
     }
 
+    // ReSharper disable once UnusedParameter.Local
     private void OnCompleted(CompletedTask @event)
     {
         IsCompleted = true;
