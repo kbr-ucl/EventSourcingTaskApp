@@ -20,12 +20,12 @@ public class Startup
 
     public void ConfigureServices(IServiceCollection services)
     {
-        services.AddEventStoreClient(new Uri("esdb://localhost:2113?tls=false"));
+        //services.AddEventStoreClient(new Uri("esdb://localhost:2113?tls=false"));
 
-        //services
-        //    .AddEventStoreClient(Configuration
-        //        .GetSection("EventStore")
-        //        .Get<string>());
+        services
+            .AddEventStoreClient(new Uri(Configuration
+                .GetSection("EventStore")
+                .Get<string>()));
 
         services.AddTransient<AggregateRepository>();
 
